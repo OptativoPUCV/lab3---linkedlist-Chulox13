@@ -54,7 +54,7 @@ void * nextList(List * list)
     return NULL;
 
   list->current = list->current->next;
-  return (vpoid *)list->current->data;
+  return (void *)list->current->data;
   
 }
 
