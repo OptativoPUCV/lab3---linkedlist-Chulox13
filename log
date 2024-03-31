@@ -395,3 +395,8 @@ list.c:177:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attr
 list.c:177:14: error: expected expression before ‘->’ token
 Compilation failed
 0655816
+Sun 31 Mar 2024 01:38:18 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+f705d20
