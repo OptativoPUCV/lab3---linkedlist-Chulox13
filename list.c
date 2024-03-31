@@ -103,7 +103,7 @@ void pushBack(List * list, void * data)
   Node* nodo = createNode(data);
   aux->next = nodo;
   nodo->prev = aux;
-  nodo->next = NULL;
+  
   list->tail = nodo;
   
   
