@@ -154,8 +154,7 @@ void * popBack(List * list) {
 void * popCurrent(List * list) 
 {
     if (list->current == NULL) {
-        printf("No hay nodo actual.\n");
-        return;
+        
     }
 
     Node* toDelete = list->current;
