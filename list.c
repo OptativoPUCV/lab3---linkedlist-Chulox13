@@ -138,7 +138,7 @@ void * popFront(List * list)
   Node* aux = list->head;
   list->head = list->head->next;
   if (list->head) list->head->prev = NULL;
-  void* data = (void*)aux->data;
+  
   free(aux);
   
   
