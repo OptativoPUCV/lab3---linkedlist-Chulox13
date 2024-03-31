@@ -325,3 +325,21 @@ list.c:173:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 c0d79ba
+Sun 31 Mar 2024 01:30:46 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:159:3: error: expected expression before ‘Node’
+  159 |   Node* toDelete = list->current;
+      |   ^~~~
+list.c:160:7: error: ‘toDelete’ undeclared (first use in this function)
+  160 |   if (toDelete == list->head) {
+      |       ^~~~~~~~
+list.c:160:7: note: each undeclared identifier is reported only once for each function it appears in
+list.c:173:1: error: control reaches end of non-void function [-Werror=return-type]
+  173 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+8e431b0

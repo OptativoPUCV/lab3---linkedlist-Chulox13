@@ -169,7 +169,7 @@ void * popCurrent(List * list)
       toDelete->next->prev = toDelete->prev;
   }
 
-  free(toDelete);
+  
 }
 
 void cleanList(List * list) {
