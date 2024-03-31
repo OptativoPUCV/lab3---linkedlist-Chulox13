@@ -116,3 +116,8 @@ list.c:89:16: error: incompatible types when assigning to type ‘Node *’ from
       |                ^~~~
 Compilation failed
 bcdb3b2
+Sun 31 Mar 2024 12:58:49 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+1e51830
