@@ -130,16 +130,7 @@ void pushCurrent(List * list, void * data)
 
 void * popFront(List * list) 
 {
-  
-  Node* toDelete = list->head;
-  list->head = list->head->next;
-  if (list->head != NULL) {
-    list->head->prev = NULL;
-  } else {
-    list->tail = NULL; // Si la lista se queda vacía
-  }
-
-  free(toDelete);
+ 
   
   
   list->current = list->head;
@@ -153,27 +144,7 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) 
 {
-  if (! (list->current == NULL)) 
-  {
-    Node* toDelete = list->current;
-    if (toDelete == list->head) 
-    {
-      list->head = toDelete->next;
-      if (list->head != NULL) list->head->prev = NULL;
-    } 
-    else if (toDelete == list->tail) 
-    {
-      list->tail = toDelete->prev;
-      list->tail->next = NULL;
-    }
-    else 
-    {
-      toDelete->prev->next = toDelete->next;
-      toDelete->next->prev = toDelete->prev;
-    }
-
-    free(toDelete);
-  }
+  
   
   return NULL;
 
