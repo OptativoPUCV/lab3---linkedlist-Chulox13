@@ -156,14 +156,20 @@ void * popCurrent(List * list)
   if (list == NULL || list->current == NULL)
     return NULL;
   
-  if (list->current->prev) list->current->prev->next = list->current->next;
-  if (list->current->next) list->current->next->prev = list->current->prev;
-  if (list->current == list->head) list->head = list->current->next;
-  if (list->current == list->tail) list->tail = list->current->prev;
-  list->current = list->current->next;
-  
-  void * list->current->data = list->current->next->data;
-  return NULL;
+  Node* toDelete = list->current;
+  if (toDelete == list->head) {
+      list->head = toDelete->next;
+      if (list->head != NULL)
+          list->head->prev = NULL;
+  } else if (toDelete == list->tail) {
+      list->tail = toDelete->prev;
+      list->tail->next = NULL;
+  } else {
+      toDelete->prev->next = toDelete->next;
+      toDelete->next->prev = toDelete->prev;
+  }
+
+  free(toDelete);
 }
 
 void cleanList(List * list) {
