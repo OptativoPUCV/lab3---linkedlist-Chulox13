@@ -2,3 +2,22 @@ Wed 27 Mar 2024 02:20:52 PM UTC:
  tests:  0|6
 total_score: 0/70
 8ebf868
+Sun 31 Mar 2024 12:43:44 AM UTC: 
+ list.c | 31 ++++++++++++++++++++++++++-----
+ 1 file changed, 26 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:57:11: error: ‘vpoid’ undeclared (first use in this function); did you mean ‘void’?
+   57 |   return (vpoid *)list->current->data;
+      |           ^~~~~
+      |           void
+list.c:57:11: note: each undeclared identifier is reported only once for each function it appears in
+list.c:57:18: error: expected expression before ‘)’ token
+   57 |   return (vpoid *)list->current->data;
+      |                  ^
+list.c:59:1: error: control reaches end of non-void function [-Werror=return-type]
+   59 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+70053e0

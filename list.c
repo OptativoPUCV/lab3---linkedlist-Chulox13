@@ -28,20 +28,41 @@ Node * createNode(void * data) {
     return new;
 }
 
-List * createList() {
-     return NULL;
+List * createList() 
+{
+  List * list = (List *)malloc(sizeof(List));
+  list->head = list->tail = list->current = NULL;
+  return list;
+  
+}
+  
+
+void * firstList(List * list) 
+{
+  if (list == NULL || list->head == NULL)
+  {
+    return NULL;
+  }
+  list->current = list->head;
+  return (void *)list->current->data;
+  
 }
 
-void * firstList(List * list) {
+void * nextList(List * list) 
+{
+  if (list == NULL || list->current == NULL || list->current->next == NULL)
     return NULL;
+
+  list->current = list->current->next;
+  return (vpoid *)list->current->data;
+  
 }
 
-void * nextList(List * list) {
-    return NULL;
-}
+void * lastList(List * list) 
+{
 
-void * lastList(List * list) {
-    return NULL;
+  
+  return NULL;
 }
 
 void * prevList(List * list) {
