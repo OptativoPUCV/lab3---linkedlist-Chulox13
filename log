@@ -55,3 +55,22 @@ Sun 31 Mar 2024 12:53:53 AM UTC:
  tests:  9|3
 total_score: 35/70
 fef90d5
+Sun 31 Mar 2024 12:56:40 AM UTC: 
+ list.c | 18 ++++--------------
+ 1 file changed, 4 insertions(+), 14 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:85:3: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+   85 |   newNode = createNode(data);
+      |   ^~~~~~~
+      |   Node
+list.c:85:3: note: each undeclared identifier is reported only once for each function it appears in
+list.c:89:23: error: expected ‘;’ before ‘}’ token
+   89 |   list->head = newNode
+      |                       ^
+      |                       ;
+......
+   93 | }
+      | ~                      
+Compilation failed
+c797821
