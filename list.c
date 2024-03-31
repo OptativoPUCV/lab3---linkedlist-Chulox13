@@ -174,7 +174,8 @@ void * popCurrent(List * list)
 
     free(toDelete);
   }
-  return list->current->data;
+  void * list->current->data = list->current->next->data;
+  return NULL;
 
   
 }

@@ -384,3 +384,14 @@ Sun 31 Mar 2024 01:37:30 AM UTC:
  1 file changed, 1 insertion(+)
  tests:  0|0
 426f36a
+Sun 31 Mar 2024 01:37:57 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:177:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+  177 |   void * list->current->data = list->current->next->data;
+      |              ^~
+list.c:177:14: error: expected expression before ‘->’ token
+Compilation failed
+0655816
