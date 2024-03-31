@@ -86,3 +86,14 @@ list.c:85:3: error: ‘newNode’ undeclared (first use in this function); did y
 list.c:85:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 899e027
+Sun 31 Mar 2024 12:57:52 AM UTC: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:85:3: error: ‘nodo’ undeclared (first use in this function)
+   85 |   nodo = createNode(data);
+      |   ^~~~
+list.c:85:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a91d8ab
