@@ -91,14 +91,25 @@ void pushFront(List * list, void * data)
   list->head = nodo;
   if (list->tail == NULL) list->tail = nodo;
   
-    
-  
-  
 }
 
-void pushBack(List * list, void * data) {
-    list->current = list->tail;
-    pushCurrent(list,data);
+void pushBack(List * list, void * data) 
+{
+  Node* aux = list->head;
+  while (aux->next != NULL)
+    {
+      aux = aux->next;
+    }
+  Node* nodo = createNode(data);
+  aux->next = nodo;
+  nodo->prev = aux;
+  nodo->next = NULL;
+  list->tail = nodo;
+  
+  
+  
+  list->current = list->tail;
+  pushCurrent(list,data);
 }
 
 void pushCurrent(List * list, void * data) {
