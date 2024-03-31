@@ -142,3 +142,19 @@ Sun 31 Mar 2024 12:59:28 AM UTC:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 df3d1d3
+Sun 31 Mar 2024 01:00:04 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:88:3: error: ‘nodo’ undeclared (first use in this function); did you mean ‘node’?
+   88 |   nodo->next = list->head;
+      |   ^~~~
+      |   node
+list.c:88:3: note: each undeclared identifier is reported only once for each function it appears in
+list.c:85:10: error: unused variable ‘node’ [-Werror=unused-variable]
+   85 |   Node * node = createNode(data);
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+988ada0
