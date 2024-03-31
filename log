@@ -27,3 +27,9 @@ Sun 31 Mar 2024 12:44:06 AM UTC:
  tests:  5|4
 total_score: 25/70
 6088ed8
+Sun 31 Mar 2024 12:49:35 AM UTC: 
+ list.c | 31 +++++++++++++++++++++++++++++--
+ 1 file changed, 29 insertions(+), 2 deletions(-)
+ tests:  9|3
+total_score: 35/70
+b5be895
