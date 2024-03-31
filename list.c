@@ -153,23 +153,25 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) 
 {
-  if (list == NULL || list->current == NULL)
-    
-  
-  Node* toDelete = list->current;
-  if (toDelete == list->head) {
-      list->head = toDelete->next;
-      if (list->head != NULL)
-          list->head->prev = NULL;
-  } else if (toDelete == list->tail) {
-      list->tail = toDelete->prev;
-      list->tail->next = NULL;
-  } else {
-      toDelete->prev->next = toDelete->next;
-      toDelete->next->prev = toDelete->prev;
-  }
+    if (list->current == NULL) {
+        printf("No hay nodo actual.\n");
+        return;
+    }
 
-  
+    Node* toDelete = list->current;
+    if (toDelete == list->head) {
+        list->head = toDelete->next;
+        if (list->head != NULL)
+            list->head->prev = NULL;
+    } else if (toDelete == list->tail) {
+        list->tail = toDelete->prev;
+        list->tail->next = NULL;
+    } else {
+        toDelete->prev->next = toDelete->next;
+        toDelete->next->prev = toDelete->prev;
+    }
+
+    free(toDelete);
 }
 
 void cleanList(List * list) {
