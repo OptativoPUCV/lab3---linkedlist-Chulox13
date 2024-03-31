@@ -39,3 +39,13 @@ Sun 31 Mar 2024 12:50:32 AM UTC:
  tests:  9|3
 total_score: 35/70
 5c8914c
+Sun 31 Mar 2024 12:52:47 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:90:25: error: ‘List’ {aka ‘struct List’} has no member named ‘data’
+   90 |     list->current = list->data;
+      |                         ^~
+Compilation failed
+70d49f8
