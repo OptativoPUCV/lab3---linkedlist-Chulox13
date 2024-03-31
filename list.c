@@ -131,8 +131,7 @@ void pushCurrent(List * list, void * data)
 void * popFront(List * list) 
 {
   if (list->head == NULL) {
-    printf("La lista está vacía. No se puede eliminar ningún elemento.\n");
-    return;
+    
   }
 
   Node* toDelete = list->head;
