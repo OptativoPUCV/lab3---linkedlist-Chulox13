@@ -162,7 +162,7 @@ void * popCurrent(List * list)
   if (list->current == list->tail) list->tail = list->current->prev;
   list->current = list->current->next;
   
-  void * list->data = list->current->data;
+  void * list->data = list.current->next->data;
   return NULL;
 }
 

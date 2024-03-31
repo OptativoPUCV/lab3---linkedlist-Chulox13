@@ -259,3 +259,18 @@ list.c:165:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attr
 list.c:165:14: error: expected expression before ‘->’ token
 Compilation failed
 3083718
+Sun 31 Mar 2024 01:27:27 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:165:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+  165 |   void * list->data = list.current->next->data;
+      |              ^~
+list.c:165:14: error: expected expression before ‘->’ token
+list.c:165:27: error: ‘list’ is a pointer; did you mean to use ‘->’?
+  165 |   void * list->data = list.current->next->data;
+      |                           ^
+      |                           ->
+Compilation failed
+88bc740
