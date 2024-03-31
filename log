@@ -49,3 +49,9 @@ list.c:90:25: error: ‘List’ {aka ‘struct List’} has no member named ‘d
       |                         ^~
 Compilation failed
 70d49f8
+Sun 31 Mar 2024 12:53:53 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|3
+total_score: 35/70
+fef90d5
