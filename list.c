@@ -131,7 +131,7 @@ void pushCurrent(List * list, void * data)
 void * popFront(List * list) 
 {
   if (list->head == NULL) {
-    
+    break;
   }
 
   Node* toDelete = list->head;
